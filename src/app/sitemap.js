@@ -1,0 +1,58 @@
+export default function sitemap() {
+  return [
+    {
+      url: 'https://rapidinvoice.online',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 1,
+    },
+    {
+      url: 'https://rapidinvoice.online/about',
+      lastModified: new Date(),
+      changeFrequency: 'monthly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://rapidinvoice.online/blog',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://rapidinvoice.online/disclaimer',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://rapidinvoice.online/generate-invoice',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://rapidinvoice.online/invoices',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://rapidinvoice.online/setting',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://rapidinvoice.online/templates',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://rapidinvoice.online/privacy-policy',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+  ]
+}
