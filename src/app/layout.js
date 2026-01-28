@@ -1,11 +1,8 @@
-'use client'
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import Script from "next/script";
-import { usePathname } from "next/navigation";
-import { useEffect } from "react";
-import * as gtag from "@/lib/gtag";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,11 +65,6 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  const pathname = usePathname();
-
-  useEffect(() => {
-    gtag.pageview(pathname);
-  }, [pathname]);
   
   return (
     <html lang="en">
@@ -96,6 +88,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <GoogleAnalytics/>
         <Toaster />
         {children}
       </body>
