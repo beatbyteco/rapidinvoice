@@ -51,7 +51,12 @@ export const metadata = {
   alternates: {
     canonical: 'https://rapidinvoice.online/',
   },
+  verification: {
+    google: "8PI_cJTBmxtryp1RAvyHUg9cqdLwZN8vTmUro4T9EsA",
+  },
 };
+
+{/* <meta name="google-site-verification" content="8PI_cJTBmxtryp1RAvyHUg9cqdLwZN8vTmUro4T9EsA" /> */}
 
 
 export default function RootLayout({ children }) {
