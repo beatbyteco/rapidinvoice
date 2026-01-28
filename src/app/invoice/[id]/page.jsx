@@ -159,10 +159,10 @@ const handleDownload = useReactToPrint({
               <Printer className="h-4 w-4" />
               <span className="hidden sm:inline">Print</span>
             </Button> */}
-            <Button variant="outline" size="sm" onClick={handleShare} className="gap-2">
+            {/* <Button variant="outline" size="sm" onClick={handleShare} className="gap-2">
               <Share2 className="h-4 w-4" />
               <span className="hidden sm:inline">Share</span>
-            </Button>
+            </Button> */}
             <Button variant="gradient" size="sm" onClick={handleDownload} disabled={!invoice} className="gap-2">
               <Download className="h-4 w-4" />
               <span className="hidden sm:inline">Download PDF</span>

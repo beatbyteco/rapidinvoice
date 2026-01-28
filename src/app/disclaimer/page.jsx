@@ -35,51 +35,118 @@ const Disclaimer = () => {
       </header>
 
       <main className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto py-12 sm:py-16">
-        <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-8">
-          Disclaimer
-        </h1>
+         <header className="mb-12 border-b pb-6">
+      <h1 className="text-3xl sm:text-4xl font-extrabold tracking-tight text-gray-900">
+        Disclaimer
+      </h1>
+      <p className="mt-3 text-sm text-gray-500">
+        <strong>Last updated:</strong> January 2026
+      </p>
+    </header>
 
-        <div className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground">
-          <p><strong>Last updated:</strong> January 2024</p>
+    {/* <!-- Content --> */}
+    <article className="
+      prose prose-lg max-w-none
+      prose-headings:text-gray-900
+      prose-headings:font-semibold
+      prose-headings:tracking-tight
+      prose-p:text-gray-600
+      prose-li:text-gray-600
+      prose-strong:text-gray-900
+      prose-ul:pl-6
+      prose-li:marker:text-gray-400
+    ">
 
-          <h2>General Information</h2>
-          <p>
-            The information provided by RapidInvoice is for general informational purposes only. All information on the site is provided in good faith, however, we make no representation or warranty of any kind, express or implied, regarding the accuracy, adequacy, validity, reliability, availability, or completeness of any information on the site.
-          </p>
+      <p>
+        Welcome to <strong>RapidInvoice</strong>. By using this website, you agree to the terms of this Disclaimer.
+      </p>
 
-          <h2>No Professional Advice</h2>
-          <p>
-            The site cannot and does not contain legal, tax, or accounting advice. The legal, tax, and accounting information is provided for general informational and educational purposes only and is not a substitute for professional advice.
-          </p>
-          <p>
-            Accordingly, before taking any actions based upon such information, we encourage you to consult with the appropriate professionals. We do not provide any kind of legal, tax, or accounting advice. The use or reliance of any information contained on this site is solely at your own risk.
-          </p>
+      <h2>1. General Information</h2>
 
-          <h2>Invoice Templates</h2>
-          <p>
-            The invoice templates provided are for general use. Tax requirements, invoice formats, and legal requirements vary by country and region. It is your responsibility to ensure that your invoices comply with applicable laws and regulations in your jurisdiction.
-          </p>
+      <p>
+        RapidInvoice is a <strong>free online invoice generation tool</strong>.<br/>
+        It is provided for <strong>general informational and business convenience purposes only</strong>.
+      </p>
 
-          <h2>Tax Calculations</h2>
-          <p>
-            While we strive to provide accurate tax calculations, the automatic tax calculations provided by our service are estimates only. You are responsible for verifying all tax amounts and ensuring compliance with applicable tax laws.
-          </p>
+      <h2>2. No Legal or Tax Advice</h2>
 
-          <h2>External Links</h2>
-          <p>
-            The site may contain links to other websites or content belonging to or originating from third parties. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, availability, or completeness by us.
-          </p>
+      <p>The invoices generated using RapidInvoice:</p>
+      <ul>
+        <li>Do not constitute legal advice</li>
+        <li>Do not constitute tax or financial advice</li>
+        <li>Should not be treated as legally binding documents without verification</li>
+      </ul>
 
-          <h2>Limitation of Liability</h2>
- <p>
-            In no event shall RapidInvoice be liable for any indirect, punitive, incidental, special, consequential, or exemplary damages, including without limitation, damages for loss of profits, goodwill, use, data, or other intangible losses, arising out of or relating to the use of, or inability to use, the service.
-          </p>
+      <p>
+        Users are advised to consult a qualified professional (accountant, tax consultant, or legal advisor)
+        before using invoices for official or legal purposes.
+      </p>
 
-          <h2>Contact Us</h2>
-          <p>
-            If you have questions about this Disclaimer, please contact us at Emaiiiiiiill.
-          </p>
-        </div>
+      <h2>3. Accuracy of Information</h2>
+
+      <p>While we strive to provide a reliable invoice generation tool:</p>
+      <ul>
+        <li>RapidInvoice does not guarantee accuracy, completeness, or correctness of invoice calculations</li>
+        <li>Users are fully responsible for verifying:</li>
+      </ul>
+
+      <ul>
+        <li>GST details</li>
+        <li>Tax rates</li>
+        <li>Totals and amounts</li>
+        <li>Client and business information</li>
+      </ul>
+
+      <h2>4. GST and Tax Compliance</h2>
+
+      <p>
+        RapidInvoice is <strong>not an officially certified GST or tax-compliant software</strong>.<br/>
+        It is only a <strong>tool to help generate invoices</strong>.
+      </p>
+
+      <p>
+        Compliance with local tax laws and regulations is entirely the user’s responsibility.
+      </p>
+
+      <h2>5. Limitation of Liability</h2>
+
+      <p>RapidInvoice and its owner shall <strong>not be held liable</strong> for:</p>
+      <ul>
+        <li>Financial losses</li>
+        <li>Tax penalties</li>
+        <li>Legal disputes</li>
+        <li>Incorrect invoices</li>
+        <li>Data loss due to browser clearing or device issues</li>
+      </ul>
+
+      <p>
+        Use of the website is <strong>entirely at your own risk</strong>.
+      </p>
+
+      <h2>6. External Links</h2>
+
+      <p>
+        The website may contain links or advertisements from third-party websites in the future.<br/>
+        RapidInvoice is <strong>not responsible</strong> for the content, privacy policies,
+        or practices of any external sites.
+      </p>
+
+      <h2>7. Changes to This Disclaimer</h2>
+
+      <p>
+        We reserve the right to modify this Disclaimer at any time without prior notice.<br/>
+        Changes will be effective immediately once posted.
+      </p>
+
+      <h2>8. Contact Information</h2>
+
+      <p>For any questions regarding this Disclaimer, please contact:</p>
+
+      <p>
+        <strong>Email:</strong> roboltin@duck.com
+      </p>
+
+    </article>
       </main>
 
       <Footer />
