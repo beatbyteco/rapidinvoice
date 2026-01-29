@@ -54,5 +54,11 @@ export default function sitemap() {
       changeFrequency: 'yearly',
       priority: 0.5,
     },
+    {
+      url: 'https://rapidinvoice.online/blog/what-is-an-invoice-and-how-to-create-one',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
   ]
 }

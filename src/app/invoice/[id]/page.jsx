@@ -42,7 +42,15 @@ const InvoiceViewPage = ( ) => {
 
 
 const handleDownload = useReactToPrint({
-  contentRef: invoiceRef,
+  content: () => {
+  if (!invoiceRef.current) {
+    toast.error('Please wait', {
+      description: 'Invoice is still loading.',
+    });
+    return null;
+  }
+  return invoiceRef.current;
+},
   documentTitle: invoice
     ? `invoice-${invoice.invoiceNumber}`
     : 'invoice',
@@ -160,7 +168,7 @@ const handleDownload = useReactToPrint({
               <Share2 className="h-4 w-4" />
               <span className="hidden sm:inline">Share</span>
             </Button> */}
-            <Button variant="gradient" size="sm" onClick={handleDownload} disabled={!invoice} className="gap-2">
+            <Button variant="gradient" size="sm" onClick={handleDownload} disabled={!invoice  || !invoiceRef.current} className="gap-2">
               <Download className="h-4 w-4" />
               <span className="hidden sm:inline">Download PDF</span>
             </Button>
@@ -227,7 +235,7 @@ Open in desktop mode to avoid layout issues.
             Download the PDF to share with your client, or print it directly.
           </p>
           <div className="flex justify-center gap-4">
-            <Button variant="gradient" onClick={handleDownload} className="gap-2">
+            <Button variant="gradient" onClick={handleDownload} disabled={!invoice || !invoiceRef.current} className="gap-2">
               <Download className="h-4 w-4" />
               Download PDF
             </Button>

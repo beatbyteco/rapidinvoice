@@ -1,8 +1,8 @@
-'use client';
+// 'use client';
 
-import { useParams } from 'next/navigation';
+// import { useParams } from 'next/navigation';
 import Link from 'next/link';
-import { motion } from 'framer-motion';
+// import { motion } from 'framer-motion';
 import { Calendar, Clock, ArrowLeft, FileText } from 'lucide-react';
 // import { SEOHead } from '@/components/seo/SEOHead';
 import { Footer } from '@/components/layout/Footer';
@@ -134,10 +134,43 @@ const blogContent = {
 //   },
 };
 
-const BlogPost = () => {
-  const params = useParams();
-  const slug = params?.slug;
-  const post = slug ? blogContent[slug] : null;
+
+// 🔥 SEO (PER BLOG)
+export async function generateMetadata({ params }) {
+  // const post = blogContent[params.slug];
+  const { slug } = await params;
+  const post = blogContent[slug];
+
+  if (!post) {
+    return {
+      title: "Blog Not Found",
+      description: "The requested blog does not exist.",
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.excerpt,
+    keywords: `${post.category}, invoice, billing, rapidinvoice`,
+    openGraph: {
+      title: post.title,
+      description: post.excerpt,
+      type: "article",
+    },
+  };
+}
+
+export function generateStaticParams() {
+  return Object.keys(blogContent).map((slug) => ({
+    slug,
+  }));
+}
+
+const BlogPost = async ({ params }) => {
+  // const params = useParams();
+  // const slug = params?.slug;
+  const { slug } = await params;
+  const post = blogContent[slug];
 
   if (!post) {
     return (
@@ -188,7 +221,8 @@ const BlogPost = () => {
             Back to Blog
           </Link>
 
-          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}>
+          {/* <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }}> */}
+          <div>
             <span className="inline-block px-3 py-1 text-sm font-medium bg-white/20 text-white rounded-full mb-4">
               {post.category}
             </span>
@@ -205,20 +239,21 @@ const BlogPost = () => {
                 {post.readTime}
               </span>
             </div>
-          </motion.div>
+          </div>
+          {/* </motion.div> */}
         </div>
       </section>
 
       {/* Content */}
       <article className="px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto py-12 sm:py-16">
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.2 }}
+        <div
+          // initial={{ opacity: 0 }}
+          // animate={{ opacity: 1 }}
+          // transition={{ delay: 0.2 }}
           className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-muted-foreground prose-li:text-muted-foreground prose-strong:text-foreground"
         >
           {post.content}
-        </motion.div>
+        </div>
 
         {/* CTA */}
         <div className="mt-12 p-8 gradient-primary rounded-2xl text-center">

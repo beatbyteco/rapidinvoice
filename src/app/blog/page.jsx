@@ -8,7 +8,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BottomNav } from "@/components/layout/BottomNav";
 
-// ❌ interface removed (JSX does not support TS types)
 
 const blogPosts = [
   {
