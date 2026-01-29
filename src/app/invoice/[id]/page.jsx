@@ -10,10 +10,10 @@ import {
   Printer,
   Trash2,
   FileText,
+  AlertTriangle,
 } from 'lucide-react';
 import { useRef } from 'react';
 import { useReactToPrint } from 'react-to-print';
-
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
 import { BottomNav } from '@/components/layout/BottomNav';
@@ -23,12 +23,11 @@ import { Button } from '@/components/ui/button';
 import { InvoiceRenderer } from '@/components/invoice/InvoiceRenderer';
 import { useInvoiceStorage } from '@/hooks/use-invoice-storage';
 import { StoragePopup } from '@/components/StoragePopup';
-// import { downloadInvoicePDF } from '@/lib/pdf-generator';
 import { toast } from 'sonner';
 
 const InvoiceViewPage = ( ) => {
-  const params = useParams();      // ✅ FIX
-  const id = params.id;            // ✅ SAFE
+  const params = useParams();      
+  const id = params.id;            
   const invoiceRef = useRef(null);
   const router = useRouter();
 
@@ -63,22 +62,22 @@ const handleDownload = useReactToPrint({
 
 //   const handlePrint = () => window.print();
 
-  const handleShare = async () => {
-    if (!invoice) return;
+  // const handleShare = async () => {
+  //   if (!invoice) return;
 
-    if (navigator.share) {
-      await navigator.share({
-        title: `Invoice ${invoice.invoiceNumber}`,
-        text: `Invoice from ${invoice.senderName}`,
-        url: window.location.href,
-      });
-    } else {
-      await navigator.clipboard.writeText(window.location.href);
-      toast.success('Link Copied!',{
-        description: 'Invoice link copied to clipboard.',
-      });
-    }
-  };
+  //   if (navigator.share) {
+  //     await navigator.share({
+  //       title: `Invoice ${invoice.invoiceNumber}`,
+  //       text: `Invoice from ${invoice.senderName}`,
+  //       url: window.location.href,
+  //     });
+  //   } else {
+  //     await navigator.clipboard.writeText(window.location.href);
+  //     toast.success('Link Copied!',{
+  //       description: 'Invoice link copied to clipboard.',
+  //     });
+  //   }
+  // };
 
   const handleDelete = () => {
     if (!invoice) return;
@@ -116,8 +115,6 @@ const handleDownload = useReactToPrint({
       </div>
     );
   }
-
-  console.log(invoice);
 
   
   return (
@@ -177,6 +174,29 @@ const handleDownload = useReactToPrint({
             </Button>
           </div>
         </motion.div>
+
+{/* Mobile Alert Banner */}
+<motion.div
+  initial={{ y: -10, opacity: 0 }}
+  animate={{ y: 0, opacity: 1 }}
+  className="mb-6 p-4 rounded-xl flex gap-3 border 
+             bg-red-500/10 border-red-500/30
+             text-amber-900 dark:text-amber-300 
+             sm:hidden"
+>
+  <AlertTriangle className="h-5 w-5 mt-0.5 text-amber-500 animate-pulse" />
+
+  <div>
+    <p className="font-semibold">
+      Desktop mode recommended
+    </p>
+    <p className="text-sm opacity-90">
+      Mobile view may distort invoices.
+Open in desktop mode to avoid layout issues.
+    </p>
+  </div>
+</motion.div>
+
 
         {/* Invoice Preview */}
         <motion.div

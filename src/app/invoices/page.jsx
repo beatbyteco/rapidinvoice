@@ -10,7 +10,6 @@ import { BottomNav } from "@/components/layout/BottomNav";
 import { AdBanner } from "@/components/layout/AdBanner";
 // import { SEOHead } from '@/components/seo/SEOHead';
 import { Button } from "@/components/ui/button";
-
 import { useInvoiceStorage } from "@/hooks/use-invoice-storage";
 import { formatCurrency, formatDate } from "@/lib/invoice-utils";
 import { toast } from "sonner";

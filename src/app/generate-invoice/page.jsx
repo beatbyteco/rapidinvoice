@@ -91,7 +91,7 @@ const GenerateInvoice = () => {
 
       {/* <SEOHead
         title="Generate Invoice"
-        description="Create professional invoices for free with our easy-to-use invoice generator. Supports multiple currencies, taxes, and custom templates."
+        description=""
         keywords="generate invoice, create invoice, free invoice generator, invoice maker"
       /> */}
 

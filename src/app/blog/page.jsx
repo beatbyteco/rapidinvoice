@@ -1,49 +1,60 @@
-'use client';
+"use client";
 
-import { motion } from 'framer-motion';
-import Link from 'next/link';
-import { Calendar, Clock, ArrowRight, User, Tag } from 'lucide-react';
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Calendar, Clock, ArrowRight, User, Tag } from "lucide-react";
 // import { SEOHead } from '@/components/seo/SEOHead';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import { BottomNav } from '@/components/layout/BottomNav';
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { BottomNav } from "@/components/layout/BottomNav";
 
 // ❌ interface removed (JSX does not support TS types)
 
 const blogPosts = [
-//   {
-//     slug: 'how-to-create-professional-invoice',
-//     title: 'How to Create a Professional Invoice: Complete Guide 2024',
-//     excerpt: 'Learn the essential elements of a professional invoice and how to create one that gets you paid faster. Includes templates and best practices.',
-//     date: '2024-01-15',
-//     readTime: '8 min read',
-//     category: 'Guides',
-//     author: 'Invoice Team',
-//     featured: true,
-//   },
-//   {
-//     slug: 'invoice-payment-terms',
-//     title: 'Invoice Payment Terms: What You Need to Know',
-//     excerpt: 'Understanding payment terms like Net 30, Net 15, and Due on Receipt. Learn how to choose the right payment terms for your business.',
-//     date: '2024-01-10',
-//     readTime: '6 min read',
-//     category: 'Business',
-//     author: 'Finance Expert',
-//   },
-//   {
-//     slug: 'gst-invoice-requirements-india',
-//     title: 'GST Invoice Requirements in India: A Complete Guide',
-//     excerpt: 'Everything you need to know about GST invoicing in India, including mandatory fields, formats, and compliance requirements.',
-//     date: '2024-01-05',
-//     readTime: '10 min read',
-//     category: 'Tax & Compliance',
-//     author: 'Tax Specialist',
-//   },
+  {
+    slug: "what-is-an-invoice-and-how-to-create-one",
+    title: "What is an Invoice and How to Create One",
+    excerpt:
+      "Learn what an invoice is and how to create one with this step-by-step guide. Includes tips on making professional invoices easily.",
+    date: "2026-01-29",
+    readTime: "6 min read",
+    category: "Guides",
+    author: "RapidInvoice Team",
+    featured: true,
+  },
+  //   {
+  //     slug: 'how-to-create-professional-invoice',
+  //     title: 'How to Create a Professional Invoice: Complete Guide 2024',
+  //     excerpt: 'Learn the essential elements of a professional invoice and how to create one that gets you paid faster. Includes templates and best practices.',
+  //     date: '2024-01-15',
+  //     readTime: '8 min read',
+  //     category: 'Guides',
+  //     author: 'Invoice Team',
+  //     featured: true,
+  //   },
+  //   {
+  //     slug: 'invoice-payment-terms',
+  //     title: 'Invoice Payment Terms: What You Need to Know',
+  //     excerpt: 'Understanding payment terms like Net 30, Net 15, and Due on Receipt. Learn how to choose the right payment terms for your business.',
+  //     date: '2024-01-10',
+  //     readTime: '6 min read',
+  //     category: 'Business',
+  //     author: 'Finance Expert',
+  //   },
+  //   {
+  //     slug: 'gst-invoice-requirements-india',
+  //     title: 'GST Invoice Requirements in India: A Complete Guide',
+  //     excerpt: 'Everything you need to know about GST invoicing in India, including mandatory fields, formats, and compliance requirements.',
+  //     date: '2024-01-05',
+  //     readTime: '10 min read',
+  //     category: 'Tax & Compliance',
+  //     author: 'Tax Specialist',
+  //   },
 ];
 
 const Blog = () => {
-  const featuredPost = blogPosts.find(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
+  const featuredPost = blogPosts.find((post) => post.featured);
+  const regularPosts = blogPosts.filter((post) => !post.featured);
 
   return (
     <div className="min-h-screen bg-background pb-20 md:pb-0">
@@ -72,7 +83,8 @@ const Blog = () => {
               RapidInvoice Blog
             </h1>
             <p className="text-lg sm:text-xl text-white/80 leading-relaxed">
-              Expert insights, practical tips, and comprehensive guides to help you master invoicing and grow your business.
+              Expert insights, practical tips, and comprehensive guides to help
+              you master invoicing and grow your business.
             </p>
           </motion.div>
         </div>
@@ -117,7 +129,10 @@ const Blog = () => {
                       </span>
                       <span className="flex items-center gap-2">
                         <Calendar className="h-4 w-4" />
-                        {new Date(featuredPost.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })}
+                        {new Date(featuredPost.date).toLocaleDateString(
+                          "en-US",
+                          { month: "short", day: "numeric", year: "numeric" },
+                        )}
                       </span>
                       <span className="flex items-center gap-2">
                         <Clock className="h-4 w-4" />
@@ -134,7 +149,9 @@ const Blog = () => {
         {/* All Posts */}
         <section>
           <div className="flex items-center justify-between mb-8">
-            <h2 className="text-2xl font-bold text-foreground">Latest Articles</h2>
+            <h2 className="text-2xl font-bold text-foreground">
+              Latest Articles
+            </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -167,7 +184,10 @@ const Blog = () => {
                         <div className="flex items-center gap-3 text-xs text-muted-foreground">
                           <span className="flex items-center gap-1">
                             <Calendar className="h-3.5 w-3.5" />
-                            {new Date(post.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
+                            {new Date(post.date).toLocaleDateString("en-US", {
+                              month: "short",
+                              day: "numeric",
+                            })}
                           </span>
                           <span className="flex items-center gap-1">
                             <Clock className="h-3.5 w-3.5" />
@@ -197,7 +217,8 @@ const Blog = () => {
               Ready to Create Professional Invoices?
             </h2>
             <p className="text-white/80 mb-8 max-w-xl mx-auto">
-              Start generating beautiful, professional invoices in minutes. No signup required.
+              Start generating beautiful, professional invoices in minutes. No
+              signup required.
             </p>
             <Link
               href="/templates"

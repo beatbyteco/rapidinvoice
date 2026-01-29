@@ -10,6 +10,62 @@ import { Button } from '@/components/ui/button';
 
 // Blog post content
 const blogContent = {
+  'what-is-an-invoice-and-how-to-create-one': {
+    title: 'What is an Invoice and How to Create One',
+    excerpt: 'Learn what an invoice is and how to create one easily with RapidInvoice. This guide walks you through the steps and important elements of creating an invoice.',
+    date: '2026-01-29',
+    readTime: '6 min read',
+    category: 'Guides',
+    content: (
+      <>
+        <p>
+          An invoice is a document that serves as a bill for goods or services provided by a business to a customer. It includes important details such as the amount due, a description of the product or service, payment terms, and due dates. Invoices are essential for businesses to maintain accurate financial records and to ensure they are paid promptly.
+        </p>
+        <h2 className='text-2xl pt-4'>What is an Invoice?</h2>
+        <p>
+          An invoice is a commercial document issued by a seller to a buyer relating to a sale transaction. It indicates the products, quantities, and agreed prices for products or services the seller had provided to the buyer.
+        </p>
+        <p>Invoices often contain the following details:</p>
+        <ul>
+          <li><strong>Seller's Information:</strong> Name, address, and contact details.</li>
+          <li><strong>Buyer's Information:</strong> Customer's name, address, and contact details.</li>
+          <li><strong>Invoice Number:</strong> A unique identifier for the transaction.</li>
+          <li><strong>Date:</strong> The date the invoice was issued.</li>
+          <li><strong>Product/Service Details:</strong> Description of what was provided, including quantity, unit price, and total price.</li>
+          <li><strong>Total Amount Due:</strong> The sum of all charges.</li>
+          <li><strong>Payment Terms:</strong> Information on when the payment is due and acceptable payment methods.</li>
+        </ul>
+        <h2 className='text-2xl pt-4'>How to Create an Invoice</h2>
+        <p>
+          Creating an invoice may seem like a daunting task, but it can be done quickly and easily with tools like RapidInvoice. Here’s a step-by-step guide to creating a professional invoice:
+        </p>
+        <ol>
+          <li><strong>Choose Your Template:</strong> First, choose a suitable invoice template. Tools like RapidInvoice offer modern, classic, or minimal designs to match your business style.</li>
+          <li><strong>Fill in the Details:</strong>
+            <ul>
+              <li><strong>Seller Information:</strong> Add your business name, address, phone number, and email.</li>
+              <li><strong>Client Information:</strong> Include your client’s name, address, and contact details.</li>
+              <li><strong>Invoice Number:</strong> Assign a unique invoice number to keep track of your transactions.</li>
+              <li><strong>Invoice Date:</strong> Specify the date the invoice is being created.</li>
+              <li><strong>Products/Services Provided:</strong> List the products or services provided, along with the quantities and unit prices.</li>
+              <li><strong>Total Amount Due:</strong> Make sure the total reflects all the charges.</li>
+            </ul>
+          </li>
+          <li><strong>Calculate Tax (if applicable):</strong> Ensure you include any applicable taxes like VAT, GST, or sales tax. Many invoicing tools automatically calculate taxes for you.</li>
+          <li><strong>Set Payment Terms:</strong> Mention the payment terms clearly, including the due date and accepted payment methods (e.g., bank transfer, PayPal).</li>
+          <li><strong>Download and Send:</strong> Once all details are filled in, download the invoice as a high-quality PDF and send it to your client via email or print it out for physical delivery.</li>
+        </ol>
+        <h2 className='text-2xl pt-4'>Conclusion</h2>
+        <p>
+          Invoices are a crucial part of business transactions, providing a clear record of services or goods delivered and ensuring timely payments. With online invoicing tools like RapidInvoice, creating professional invoices has never been easier. Simply follow the steps outlined above, and you'll have an invoice ready in no time! Plus, with features like multi-currency support, tax compliance, and PDF exports, RapidInvoice is the ideal solution for freelancers and small businesses.
+        </p>
+        <p>
+          Start creating your invoices today, free of charge, with <a className='text-blue-400' href="https://rapidinvoice.online/">RapidInvoice</a>.
+        </p>
+      </>
+    )
+  },
+
 //   'how-to-create-professional-invoice': {
 //     title: 'How to Create a Professional Invoice: Complete Guide 2024',
 //     excerpt: 'Learn the essential elements of a professional invoice and how to create one that gets you paid faster.',

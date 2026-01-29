@@ -8,7 +8,7 @@ const ONE_MONTH_MS = 30 * 24 * 60 * 60 * 1000; // 30 days
 export const useInvoiceStorage = () => {
   const [invoices, setInvoices] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [showStoragePopup, setShowStoragePopup] = useState(false);
+  const [showStoragePopup, setShowStoragePopup] = useState(true);
 
   // Clean up old invoices (older than 1 month)
   const cleanupOldInvoices = useCallback((storedInvoices) => {
