@@ -23,6 +23,7 @@ import { Button } from '@/components/ui/button';
 import { InvoiceRenderer } from '@/components/invoice/InvoiceRenderer';
 import { useInvoiceStorage } from '@/hooks/use-invoice-storage';
 import { StoragePopup } from '@/components/StoragePopup';
+import { shareInvoicePDF } from '@/lib/shareInvoicePDF';
 import { toast } from 'sonner';
 
 const InvoiceViewPage = ( ) => {
@@ -46,11 +47,16 @@ const handleDownload = useReactToPrint({
   documentTitle: invoice
     ? `invoice-${invoice.invoiceNumber}`
     : 'invoice',
-    onAfterPrint: () => {
+  onAfterPrint: () => {
     toast.success('PDF Downloaded!',{
         description: `Invoice ${invoice.invoiceNumber} has been saved to your device.`,
     });
   },
+//   onBeforePrint: () =>{
+//     new Promise((resolve) => {
+//       setTimeout(resolve, 100); // allow layout to settle
+//   });
+// },
   onPrintError: () => {
     toast.error('Download Failed', {
       description: 'There was an error generating your PDF.',
@@ -61,6 +67,20 @@ const handleDownload = useReactToPrint({
 
 
 //   const handlePrint = () => window.print();
+
+const handleShare = async () => {
+  try {
+    await shareInvoicePDF(invoiceRef.current, invoice.invoiceNumber);
+    toast.success('Invoice Shared!', {
+      description: 'PDF shared successfully.',
+    });
+  } catch (err) {
+    toast.error('Share Failed', {
+      description: 'Your device does not support PDF sharing.',
+    });
+  }
+};
+
 
   // const handleShare = async () => {
   //   if (!invoice) return;
@@ -203,7 +223,8 @@ Open in desktop mode to avoid layout issues.
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="print:shadow-none"
+          className="print:shadow-none print-invoice"
+          id="invoice-pdf-content"
         >
            {invoice && (
     <InvoiceRenderer

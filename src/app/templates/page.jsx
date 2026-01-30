@@ -68,12 +68,12 @@ const TemplateSelection = () => {
           ))}
         </motion.div>
 
-        {/* Continue Button */}
+        {/* Continue Button - Desktop */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
-          className="flex justify-center"
+          className="hidden sm:flex justify-center"
         >
           <Button
             variant="gradient"
@@ -86,6 +86,24 @@ const TemplateSelection = () => {
           </Button>
         </motion.div>
       </main>
+
+      {/* Floating Continue Button - Mobile Only */}
+      <motion.div
+        initial={{ y: 100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.3, type: "spring", stiffness: 300, damping: 30 }}
+        className="fixed bottom-24 left-4 right-4 z-50 sm:hidden"
+      >
+        <Button
+          variant="gradient"
+          size="lg"
+          onClick={handleContinue}
+          className="w-full gap-2 shadow-xl"
+        >
+          Continue with {templates.find(t => t.id === selectedTemplate)?.name}
+          <ArrowRight className="h-5 w-5" />
+        </Button>
+      </motion.div>
 
       <Footer />
       <BottomNav />

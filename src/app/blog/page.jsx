@@ -8,7 +8,6 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { BottomNav } from "@/components/layout/BottomNav";
 
-
 const blogPosts = [
   {
     slug: "what-is-an-invoice-and-how-to-create-one",
@@ -20,6 +19,17 @@ const blogPosts = [
     category: "Guides",
     author: "RapidInvoice Team",
     featured: true,
+  },
+  {
+    slug: "invoice-vs-receipt-whats-the-difference",
+    title:
+      "Invoice vs Receipt: What’s the Difference? (Complete Guide for 2026)",
+    excerpt:
+      "Learn the clear difference between invoice and receipt, when to use each, real examples, and common mistakes explained in simple language.",
+    date: "2026-01-30",
+    readTime: "10 min read",
+    category: "Guides",
+    author: "RapidInvoice Team",
   },
   //   {
   //     slug: 'how-to-create-professional-invoice',

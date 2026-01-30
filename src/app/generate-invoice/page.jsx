@@ -15,6 +15,7 @@ import { FileEdit, Eye } from 'lucide-react';
 import { useUserSettings } from '@/hooks/use-user-settings';
 import { useInvoiceStorage } from '@/hooks/use-invoice-storage';
 import { StoragePopup } from '@/components/StoragePopup';
+import { v4 as uuidv4 } from 'uuid';
 
 const GenerateInvoice = () => {
   const router = useRouter();
@@ -32,7 +33,7 @@ const GenerateInvoice = () => {
   };
 
   const [invoice, setInvoice] = useState({
-    id: crypto.randomUUID(),
+    id: uuidv4(),
     invoiceNumber: generateInvoiceNumber(settings.invoicePrefix || 'INV'),
     status: 'draft',
     createdAt: new Date().toISOString().split('T')[0],

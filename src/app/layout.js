@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Free Invoice Generator | RapidInvoice",
+  title: "Free Invoice Generator Online (No Signup) | RapidInvoice",
   description:
     "Create professional invoices for free online. No signup required. Multi-currency support, GST/VAT compliant, custom templates, PDF export. Best free invoice maker.",
   keywords: [
