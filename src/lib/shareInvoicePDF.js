@@ -1,47 +1,52 @@
-'use client';
+const handleShare = async () => {
+  try {
+    const element = invoiceRef.current;
+    if (!element) throw new Error('Invoice not found');
 
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
+    const canvas = await html2canvas(element, {
+      scale: 2,
+      backgroundColor: '#ffffff',
+      useCORS: true,
+    });
 
-export async function shareInvoicePDF(element, invoiceNumber) {
-  if (!element) throw new Error('Invoice not found');
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
 
-  const canvas = await html2canvas(element, {
-    scale: 2,
-    backgroundColor: '#ffffff',
-    useCORS: true,
-  });
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const imgWidth = pageWidth - 20;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-  const imgData = canvas.toDataURL('image/png');
+    pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
 
-  const pdf = new jsPDF({
-    orientation: 'portrait',
-    unit: 'mm',
-    format: 'a4',
-  });
+    const blob = pdf.output('blob');
+    const file = new File(
+      [blob],
+      `invoice-${invoice.invoiceNumber}.pdf`,
+      { type: 'application/pdf' }
+    );
 
-  const pageWidth = pdf.internal.pageSize.getWidth();
-  const imgWidth = pageWidth - 20;
-  const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    // ✅ TRY native share
+    if (navigator.canShare && navigator.canShare({ files: [file] })) {
+      await navigator.share({
+        title: `Invoice ${invoice.invoiceNumber}`,
+        files: [file],
+      });
 
-  pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
+      toast.success('Invoice Shared!', {
+        description: 'PDF shared successfully.',
+      });
+    } 
+    // 🔁 FALLBACK
+    else {
+      pdf.save(`invoice-${invoice.invoiceNumber}.pdf`);
 
-  // 👇 IMPORTANT: Blob instead of save()
-  const pdfBlob = pdf.output('blob');
-
-  const file = new File(
-    [pdfBlob],
-    `invoice-${invoiceNumber}.pdf`,
-    { type: 'application/pdf' }
-  );
-
-  if (!navigator.canShare || !navigator.canShare({ files: [file] })) {
-    throw new Error('Sharing not supported');
+      toast.info('PDF Downloaded', {
+        description: 'Your browser does not support direct sharing. Please share the downloaded PDF.',
+      });
+    }
+  } catch (err) {
+    toast.error('Share Failed', {
+      description: 'Unable to generate or share PDF.',
+    });
   }
-
-  await navigator.share({
-    title: `Invoice ${invoiceNumber}`,
-    text: 'Invoice PDF',
-    files: [file],
-  });
-}
+};
