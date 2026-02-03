@@ -68,18 +68,6 @@ const handleDownload = useReactToPrint({
 
 //   const handlePrint = () => window.print();
 
-const handleShare = async () => {
-  try {
-    await shareInvoicePDF(invoiceRef.current, invoice.invoiceNumber);
-    toast.success('Invoice Shared!', {
-      description: 'PDF shared successfully.',
-    });
-  } catch (err) {
-    toast.error('Share Failed', {
-      description: 'Your device does not support PDF sharing.',
-    });
-  }
-};
 
 
   // const handleShare = async () => {

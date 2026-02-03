@@ -18,7 +18,7 @@ export const InvoiceRenderer = forwardRef(function InvoiceRenderer(
     <div
       ref={ref}
       id="invoice-pdf-content"
-      className={cn('bg-white shadow-lg  overflow-hidden', className)}
+      className={cn('bg-white shadow-lg overflow-hidden', className)}
     >
       <TemplateComponent invoice={invoice} theme={theme} />
     </div>

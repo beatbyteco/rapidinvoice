@@ -64,10 +64,29 @@ export const metadata = {
 
 
 export default function RootLayout({ children }) {
+   const schema = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: "RapidInvoice",
+    applicationCategory: "BusinessApplication",
+    operatingSystem: "Web",
+    offers: {
+      "@type": "Offer",
+      price: "0",
+      priceCurrency: "USD"
+    }
+  };
+
   
   return (
     <html lang="en">
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(schema),
+          }}
+        />
         {/* Google Analytics */}
         <Script
           src={`https://www.googletagmanager.com/gtag/js?id=G-4ZBYFEW08H`}

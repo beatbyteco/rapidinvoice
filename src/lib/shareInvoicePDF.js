@@ -1,46 +1,65 @@
-'use client';
+// 'use client';
 
-import html2canvas from 'html2canvas';
-import jsPDF from 'jspdf';
+// import html2canvas from 'html2canvas';
+// import jsPDF from 'jspdf';
 
-export async function shareInvoicePDF(element, invoiceNumber) {
-  if (!element) throw new Error('Invoice element not found');
+// export async function shareInvoicePDF(element, invoiceNumber) {
+//   if (!element) throw new Error('Invoice element not found');
 
-  const canvas = await html2canvas(element, {
-    scale: 2,
-    backgroundColor: '#ffffff',
-    useCORS: true,
-  });
+//   if (document.fonts) {
+//     await document.fonts.ready;
+//   }
 
-  const imgData = canvas.toDataURL('image/png');
+//   const canvas = await html2canvas(element, {
+//     scale: 2,
+//     backgroundColor: '#ffffff',
+//     useCORS: true,
+//     allowTaint: true,
+//     windowWidth: element.scrollWidth,
+//     windowHeight: element.scrollHeight,
+//   });
 
-  const pdf = new jsPDF({
-    orientation: 'portrait',
-    unit: 'mm',
-    format: 'a4',
-  });
+//   if (!canvas || canvas.width === 0) {
+//     throw new Error('Canvas generation failed');
+//   }
 
-  const pageWidth = pdf.internal.pageSize.getWidth();
-  const imgWidth = pageWidth - 20;
-  const imgHeight = (canvas.height * imgWidth) / canvas.width;
+//   const imgData = canvas.toDataURL('image/png');
 
-  pdf.addImage(imgData, 'PNG', 10, 10, imgWidth, imgHeight);
+//   const pdf = new jsPDF('p', 'mm', 'a4');
+//   const pageWidth = pdf.internal.pageSize.getWidth();
+//   const pageHeight = pdf.internal.pageSize.getHeight();
 
-  const blob = pdf.output('blob');
+//   const imgWidth = pageWidth - 20;
+//   const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-  const file = new File(
-    [blob],
-    `invoice-${invoiceNumber}.pdf`,
-    { type: 'application/pdf' }
-  );
+//   let heightLeft = imgHeight;
+//   let position = 10;
 
-  if (navigator.canShare && navigator.canShare({ files: [file] })) {
-    await navigator.share({
-      title: `Invoice ${invoiceNumber}`,
-      files: [file],
-    });
-  } else {
-    pdf.save(`invoice-${invoiceNumber}.pdf`);
-    throw new Error('SHARE_NOT_SUPPORTED');
-  }
-}
+//   pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+//   heightLeft -= pageHeight;
+
+//   while (heightLeft > 0) {
+//     position = heightLeft - imgHeight + 10;
+//     pdf.addPage();
+//     pdf.addImage(imgData, 'PNG', 10, position, imgWidth, imgHeight);
+//     heightLeft -= pageHeight;
+//   }
+
+//   const blob = pdf.output('blob');
+
+//   const file = new File(
+//     [blob],
+//     `invoice-${invoiceNumber}.pdf`,
+//     { type: 'application/pdf' }
+//   );
+
+//   if (navigator.canShare && navigator.canShare({ files: [file] })) {
+//     await navigator.share({
+//       title: `Invoice ${invoiceNumber}`,
+//       files: [file],
+//     });
+//   } else {
+//     pdf.save(`invoice-${invoiceNumber}.pdf`);
+//     throw new Error('SHARE_NOT_SUPPORTED');
+//   }
+// }

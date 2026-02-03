@@ -31,6 +31,16 @@ const blogPosts = [
     category: "Guides",
     author: "RapidInvoice Team",
   },
+  {
+  slug: 'w-9-vs-invoice-whats-the-difference',
+  title: 'W-9 vs Invoice: What’s the Difference? (Complete Guide for 2026)',
+  excerpt: 'Learn the clear difference between W-9 and Invoice, when each is required, real-life examples, and common mistakes explained in simple English.',
+  date: '2026-02-02',
+  readTime: '10 min read',
+  category: 'Guides',
+  author: 'RapidInvoice Team',
+},
+
   //   {
   //     slug: 'how-to-create-professional-invoice',
   //     title: 'How to Create a Professional Invoice: Complete Guide 2024',
