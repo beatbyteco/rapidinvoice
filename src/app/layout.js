@@ -53,7 +53,7 @@ export const metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://rapidinvoice.online/",
+    canonical: "https://rapidinvoice.online",
   },
   verification: {
     google: "8PI_cJTBmxtryp1RAvyHUg9cqdLwZN8vTmUro4T9EsA",
