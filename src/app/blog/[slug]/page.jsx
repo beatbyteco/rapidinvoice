@@ -719,6 +719,7 @@ export async function generateMetadata({ params }) {
   // const post = blogContent[params.slug];
   const { slug } = await params;
   const post = blogContent[slug];
+  const canonicalUrl = `https://rapidinvoice.online/blog/${slug}`;
 
   if (!post) {
     return {
@@ -731,10 +732,14 @@ export async function generateMetadata({ params }) {
     title: post.title,
     description: post.excerpt,
     keywords: `${post.keyword}, invoice, billing, rapidinvoice`,
+    alternates: {
+      canonical: canonicalUrl, // ✅ THIS IS THE FIX
+    },
     openGraph: {
       title: post.title,
       description: post.excerpt,
       type: "article",
+      url: canonicalUrl,
     },
   };
 }

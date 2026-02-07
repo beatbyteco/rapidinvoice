@@ -18,6 +18,9 @@ export const metadata = {
     "professional invoice generator online free no signup",
     "easy invoice generator for small business USA",
   ],
+  alternates: {
+    canonical: "https://rapidinvoice.online/generate-invoice",
+  },
 }
 
 
