@@ -40,6 +40,16 @@ const blogPosts = [
   category: 'Guides',
   author: 'RapidInvoice Team',
 },
+{
+  slug: 'do-freelancers-need-to-charge-vat-in-dubai',
+  title: 'Do Freelancers Need to Charge VAT in Dubai? (UAE VAT Guide 2026)',
+  excerpt: 'Learn when freelancers in Dubai must charge VAT, registration thresholds, exemptions, and how to invoice correctly under UAE VAT law.',
+  date: '2026-02-07',
+  readTime: '11 min read',
+  category: 'Guides',
+  author: 'RapidInvoice Team',
+},
+
 
   //   {
   //     slug: 'how-to-create-professional-invoice',
