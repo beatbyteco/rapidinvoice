@@ -10,6 +10,44 @@ import { BottomNav } from "@/components/layout/BottomNav";
 
 const blogPosts = [
   {
+  slug: "what-is-a-vat-invoice",
+  title: "What Is a VAT Invoice?",
+  excerpt:
+    "Learn what a VAT invoice is, how it works, what it must include, and how it differs from a normal invoice in this beginner-friendly guide.",
+  date: "2026-02-14",
+  readTime: "9 min read",
+  category: "Guides",
+  author: "RapidInvoice Team",
+},
+  {
+  slug: "do-freelancers-need-to-add-tax-on-invoices-in-usa",
+  title: "Do Freelancers Need to Add Tax on Invoices in the USA?",
+  excerpt:
+    "Learn whether freelancers need to add tax to invoices in the USA, including income tax, self-employment tax, and sales tax rules explained clearly.",
+  date: "2026-02-13",
+  readTime: "11 min read",
+  category: "Guides",
+  author: "RapidInvoice Team",
+},
+{
+  slug: 'do-freelancers-need-to-charge-vat-in-dubai',
+  title: 'Do Freelancers Need to Charge VAT in Dubai? (UAE VAT Guide 2026)',
+  excerpt: 'Learn when freelancers in Dubai must charge VAT, registration thresholds, exemptions, and how to invoice correctly under UAE VAT law.',
+  date: '2026-02-07',
+  readTime: '11 min read',
+  category: 'Guides',
+  author: 'RapidInvoice Team',
+},
+{
+  slug: 'w-9-vs-invoice-whats-the-difference',
+  title: 'W-9 vs Invoice: What’s the Difference? (Complete Guide for 2026)',
+  excerpt: 'Learn the clear difference between W-9 and Invoice, when each is required, real-life examples, and common mistakes explained in simple English.',
+  date: '2026-02-02',
+  readTime: '10 min read',
+  category: 'Guides',
+  author: 'RapidInvoice Team',
+},
+  {
     slug: "what-is-an-invoice-and-how-to-create-one",
     title: "What is an Invoice and How to Create One",
     excerpt:
@@ -31,54 +69,11 @@ const blogPosts = [
     category: "Guides",
     author: "RapidInvoice Team",
   },
-  {
-  slug: 'w-9-vs-invoice-whats-the-difference',
-  title: 'W-9 vs Invoice: What’s the Difference? (Complete Guide for 2026)',
-  excerpt: 'Learn the clear difference between W-9 and Invoice, when each is required, real-life examples, and common mistakes explained in simple English.',
-  date: '2026-02-02',
-  readTime: '10 min read',
-  category: 'Guides',
-  author: 'RapidInvoice Team',
-},
-{
-  slug: 'do-freelancers-need-to-charge-vat-in-dubai',
-  title: 'Do Freelancers Need to Charge VAT in Dubai? (UAE VAT Guide 2026)',
-  excerpt: 'Learn when freelancers in Dubai must charge VAT, registration thresholds, exemptions, and how to invoice correctly under UAE VAT law.',
-  date: '2026-02-07',
-  readTime: '11 min read',
-  category: 'Guides',
-  author: 'RapidInvoice Team',
-},
+  
+  
 
 
-  //   {
-  //     slug: 'how-to-create-professional-invoice',
-  //     title: 'How to Create a Professional Invoice: Complete Guide 2024',
-  //     excerpt: 'Learn the essential elements of a professional invoice and how to create one that gets you paid faster. Includes templates and best practices.',
-  //     date: '2024-01-15',
-  //     readTime: '8 min read',
-  //     category: 'Guides',
-  //     author: 'Invoice Team',
-  //     featured: true,
-  //   },
-  //   {
-  //     slug: 'invoice-payment-terms',
-  //     title: 'Invoice Payment Terms: What You Need to Know',
-  //     excerpt: 'Understanding payment terms like Net 30, Net 15, and Due on Receipt. Learn how to choose the right payment terms for your business.',
-  //     date: '2024-01-10',
-  //     readTime: '6 min read',
-  //     category: 'Business',
-  //     author: 'Finance Expert',
-  //   },
-  //   {
-  //     slug: 'gst-invoice-requirements-india',
-  //     title: 'GST Invoice Requirements in India: A Complete Guide',
-  //     excerpt: 'Everything you need to know about GST invoicing in India, including mandatory fields, formats, and compliance requirements.',
-  //     date: '2024-01-05',
-  //     readTime: '10 min read',
-  //     category: 'Tax & Compliance',
-  //     author: 'Tax Specialist',
-  //   },
+
 ];
 
 const Blog = () => {

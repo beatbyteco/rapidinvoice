@@ -78,5 +78,17 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: 'https://rapidinvoice.online/blog/do-freelancers-need-to-add-tax-on-invoices-in-usa',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://rapidinvoice.online/blog/what-is-a-vat-invoice',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
   ]
 }
