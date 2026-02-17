@@ -13,6 +13,18 @@ export default function sitemap() {
       priority: 0.5,
     },
     {
+      url: 'https://rapidinvoice.online/terms',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
+      url: 'https://rapidinvoice.online/contact',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.5,
+    },
+    {
       url: 'https://rapidinvoice.online/blog',
       lastModified: new Date(),
       changeFrequency: 'weekly',

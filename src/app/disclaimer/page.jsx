@@ -61,14 +61,14 @@ const Disclaimer = () => {
         Welcome to <strong>RapidInvoice</strong>. By using this website, you agree to the terms of this Disclaimer.
       </p>
 
-      <h2>1. General Information</h2>
+      <h2 className="pt-5">1. General Information</h2>
 
       <p>
         RapidInvoice is a <strong>free online invoice generation tool</strong>.<br/>
         It is provided for <strong>general informational and business convenience purposes only</strong>.
       </p>
 
-      <h2>2. No Legal or Tax Advice</h2>
+      <h2 className="pt-5">2. No Legal or Tax Advice</h2>
 
       <p>The invoices generated using RapidInvoice:</p>
       <ul>
@@ -82,7 +82,7 @@ const Disclaimer = () => {
         before using invoices for official or legal purposes.
       </p>
 
-      <h2>3. Accuracy of Information</h2>
+      <h2 className="pt-5">3. Accuracy of Information</h2>
 
       <p>While we strive to provide a reliable invoice generation tool:</p>
       <ul>
@@ -97,7 +97,7 @@ const Disclaimer = () => {
         <li>Client and business information</li>
       </ul>
 
-      <h2>4. GST and Tax Compliance</h2>
+      <h2 className="pt-5">4. GST and Tax Compliance</h2>
 
       <p>
         RapidInvoice is <strong>not an officially certified GST or tax-compliant software</strong>.<br/>
@@ -108,7 +108,7 @@ const Disclaimer = () => {
         Compliance with local tax laws and regulations is entirely the user’s responsibility.
       </p>
 
-      <h2>5. Limitation of Liability</h2>
+      <h2 className="pt-5">5. Limitation of Liability</h2>
 
       <p>RapidInvoice and its owner shall <strong>not be held liable</strong> for:</p>
       <ul>
@@ -123,7 +123,7 @@ const Disclaimer = () => {
         Use of the website is <strong>entirely at your own risk</strong>.
       </p>
 
-      <h2>6. External Links</h2>
+      <h2 className="pt-5">6. External Links</h2>
 
       <p>
         The website may contain links or advertisements from third-party websites in the future.<br/>
@@ -131,14 +131,14 @@ const Disclaimer = () => {
         or practices of any external sites.
       </p>
 
-      <h2>7. Changes to This Disclaimer</h2>
+      <h2 className="pt-5">7. Changes to This Disclaimer</h2>
 
       <p>
         We reserve the right to modify this Disclaimer at any time without prior notice.<br/>
         Changes will be effective immediately once posted.
       </p>
 
-      <h2>8. Contact Information</h2>
+      <h2 className="pt-5">8. Contact Information</h2>
 
       <p>For any questions regarding this Disclaimer, please contact:</p>
 

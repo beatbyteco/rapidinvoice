@@ -76,7 +76,7 @@ const PrivacyPolicy = () => {
         how we handle information when you use our website.
       </p>
 
-      <h2>1. Information We Collect</h2>
+      <h2 className="pt-5">1. Information We Collect</h2>
 
       <p>
         <strong>RapidInvoice does not collect or store any personal information on its servers.</strong>
@@ -95,7 +95,7 @@ const PrivacyPolicy = () => {
         <li>The locally stored data is automatically deleted after 30 days</li>
       </ul>
 
-      <h2>2. How We Use Your Information</h2>
+      <h2 className="pt-5">2. How We Use Your Information</h2>
 
       <p>Since we do not collect personal data:</p>
       <ul>
@@ -104,7 +104,7 @@ const PrivacyPolicy = () => {
         <li>All invoice generation happens directly in your browser</li>
       </ul>
 
-      <h2>3. Cookies and Analytics</h2>
+      <h2 className="pt-5">3. Cookies and Analytics</h2>
 
       <p>
         We use <strong>Google Analytics</strong> to understand how users interact with our website.
@@ -124,7 +124,7 @@ const PrivacyPolicy = () => {
 
       <p>You can disable cookies anytime through your browser settings.</p>
 
-      <h2>4. Third-Party Services</h2>
+      <h2 className="pt-5">4. Third-Party Services</h2>
 
       <ul>
         <li>Google Analytics</li>
@@ -137,7 +137,7 @@ const PrivacyPolicy = () => {
         RapidInvoice does not control how these services collect or use data.
       </p>
 
-      <h2>5. Data Security</h2>
+      <h2 className="pt-5">5. Data Security</h2>
 
       <ul>
         <li>All invoice data remains on the user’s device</li>
@@ -145,26 +145,26 @@ const PrivacyPolicy = () => {
         <li>Users are responsible for securing their own devices and browsers</li>
       </ul>
 
-      <h2>6. Children’s Information</h2>
+      <h2 className="pt-5">6. Children’s Information</h2>
 
       <p>
         RapidInvoice does not knowingly collect any personal information from children under the age of 13.
       </p>
 
-      <h2>7. Your Consent</h2>
+      <h2 className="pt-5">7. Your Consent</h2>
 
       <p>
         By using RapidInvoice, you consent to this Privacy Policy and agree to its terms.
       </p>
 
-      <h2>8. Changes to This Policy</h2>
+      <h2 className="pt-5">8. Changes to This Policy</h2>
 
       <p>
         We may update this Privacy Policy from time to time.
         Any changes will be posted on this page with an updated date.
       </p>
 
-      <h2>9. Contact Us</h2>
+      <h2 className="pt-5">9. Contact Us</h2>
 
       <p>If you have any questions about this Privacy Policy, you can contact us at:</p>
 
