@@ -58,13 +58,15 @@ export const metadata = {
   verification: {
     google: "8PI_cJTBmxtryp1RAvyHUg9cqdLwZN8vTmUro4T9EsA",
   },
+  other: {
+    "google-adsense-account": "ca-pub-5775243078080612",
+  },
 };
 
-  /* <meta name="google-site-verification" content="8PI_cJTBmxtryp1RAvyHUg9cqdLwZN8vTmUro4T9EsA" /> */
-
+/* <meta name="google-site-verification" content="8PI_cJTBmxtryp1RAvyHUg9cqdLwZN8vTmUro4T9EsA" /> */
 
 export default function RootLayout({ children }) {
-   const schema = {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     name: "RapidInvoice",
@@ -73,11 +75,10 @@ export default function RootLayout({ children }) {
     offers: {
       "@type": "Offer",
       price: "0",
-      priceCurrency: "USD"
-    }
+      priceCurrency: "USD",
+    },
   };
 
-  
   return (
     <html lang="en">
       <head>
@@ -86,6 +87,12 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(schema),
           }}
+        />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5775243078080612"
+          crossorigin="anonymous"
+          strategy="afterInteractive"
         />
         {/* Google Analytics */}
         <Script
@@ -106,7 +113,7 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <GoogleAnalytics/>
+        <GoogleAnalytics />
         <Toaster />
         {children}
       </body>
