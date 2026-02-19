@@ -10,6 +10,16 @@ import { BottomNav } from "@/components/layout/BottomNav";
 
 const blogPosts = [
   {
+  slug: "how-to-send-invoices-that-get-paid-faster",
+  title: "How to Send Invoices That Get Paid Faster",
+  excerpt:
+    "Discover proven strategies to send invoices that get paid faster, reduce late payments, and improve cash flow for your business.",
+  date: "2026-02-19",
+  readTime: "10 min read",
+  category: "Guides",
+  author: "RapidInvoice Team",
+},
+  {
   slug: "what-is-a-vat-invoice",
   title: "What Is a VAT Invoice?",
   excerpt:
@@ -69,11 +79,6 @@ const blogPosts = [
     category: "Guides",
     author: "RapidInvoice Team",
   },
-  
-  
-
-
-
 ];
 
 const Blog = () => {
