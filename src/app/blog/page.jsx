@@ -10,6 +10,26 @@ import { BottomNav } from "@/components/layout/BottomNav";
 
 const blogPosts = [
   {
+  slug: "what-details-are-legally-required-on-a-business-invoice",
+  title: "What Details Are Legally Required on a Business Invoice",
+  excerpt:
+    "Learn what details are legally required on a business invoice, including mandatory fields, tax requirements, and compliance rules.",
+  date: "2026-02-25",
+  readTime: "10 min read",
+  category: "Guides",
+  author: "RapidInvoice Team",
+},
+  {
+  slug: "do-i-need-both-an-invoice-and-a-receipt",
+  title: "Do I Need Both an Invoice and a Receipt?",
+  excerpt:
+    "Learn whether you need both an invoice and a receipt, the key differences, legal requirements, and when each document is necessary.",
+  date: "2026-02-24",
+  readTime: "10 min read",
+  category: "Guides",
+  author: "RapidInvoice Team",
+},
+  {
   slug: "how-to-send-invoices-that-get-paid-faster",
   title: "How to Send Invoices That Get Paid Faster",
   excerpt:

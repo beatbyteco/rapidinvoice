@@ -108,5 +108,19 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
+    {
+      url: 'https://rapidinvoice.online/blog/do-i-need-both-an-invoice-and-a-receipt',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://rapidinvoice.online/blog/what-details-are-legally-required-on-a-business-invoice',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+
+
   ]
 }
