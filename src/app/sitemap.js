@@ -120,7 +120,54 @@ export default function sitemap() {
       changeFrequency: 'weekly',
       priority: 0.8,
     },
-
+    {
+      url: 'https://rapidinvoice.online/tools',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://rapidinvoice.online/tools/gst-calculator',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://rapidinvoice.online/tools/vat-calculator',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://rapidinvoice.online/tools/sales-tax-calculator',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://rapidinvoice.online/tools/profit-margin-calculator',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://rapidinvoice.online/tools/break-even-calculator',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://rapidinvoice.online/tools/markup-calculator',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
+    {
+      url: 'https://rapidinvoice.online/tools/discount-calculator',
+      lastModified: new Date(),
+      changeFrequency: 'weekly',
+      priority: 0.8,
+    },
 
   ]
 }

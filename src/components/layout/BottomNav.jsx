@@ -1,11 +1,12 @@
 'use client';
 
 import { NavLink } from '@/components/NavLink';
-import { LayoutDashboard, FileText, PlusCircle, Settings } from 'lucide-react';
+import { LayoutDashboard, FileText, PlusCircle, Settings, Calculator } from 'lucide-react';
 
 const navItems = [
   { to: '/templates', icon: PlusCircle, label: 'Create' },
   { to: '/invoices', icon: FileText, label: 'Invoices' },
+    { to: '/tools', icon: Calculator, label: 'Tools' },
   { to: '/settings', icon: Settings, label: 'Settings' },
 ];
 

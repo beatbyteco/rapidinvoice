@@ -1,6 +1,6 @@
 'use client';
 
-import { FileText, Plus, Settings, FileStack } from 'lucide-react';
+import { FileText, Plus, Settings, FileStack, Calculator } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Button } from '@/components/ui/button';
@@ -9,6 +9,7 @@ import { cn } from '@/lib/utils';
 const navItems = [
   { href: '/templates', label: 'Create', icon: Plus },
   { href: '/invoices', label: 'My Invoices', icon: FileStack },
+  { href: '/tools', label: 'Tools', icon: Calculator },
   { href: '/settings', label: 'Settings', icon: Settings },
 ];
 

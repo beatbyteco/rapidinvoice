@@ -4,6 +4,7 @@ import { FileText } from 'lucide-react';
 const footerLinks = {
   product: [
     { href: '/templates', label: 'Invoice Generator' },
+    { href: '/tools', label: 'Calculators' },
     { href: '/invoices', label: 'My Invoices' },
     { href: '/settings', label: 'Settings' },
     { href: '/blog', label: 'Blog' },
