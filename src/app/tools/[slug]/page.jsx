@@ -1,5 +1,4 @@
 import { notFound } from "next/navigation";
-import { getToolBySlug } from "@/lib/toolsData";
 
 import GSTCalculator from "@/components/calculators/GSTCalculator";
 import VATCalculator from "@/components/calculators/VATCalculator";
