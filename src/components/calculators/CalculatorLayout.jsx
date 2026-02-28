@@ -11,7 +11,7 @@ import { getRelatedTools } from "@/lib/toolsData";
 
 export default function CalculatorLayout({ tool, children }) {
   const related = getRelatedTools(tool.slug);
-  const canonicalUrl = `https://invoiceflow.app/tools/${tool.slug}`;
+  const canonicalUrl = `https://rapidinvoice.online/tools/${tool.slug}`;
 
   const faqSchema = {
     "@context": "https://schema.org",
@@ -34,13 +34,13 @@ export default function CalculatorLayout({ tool, children }) {
         "@type": "ListItem",
         position: 1,
         name: "Home",
-        item: "https://invoiceflow.app/",
+        item: "https://rapidinvoice.online/",
       },
       {
         "@type": "ListItem",
         position: 2,
         name: "Tools",
-        item: "https://invoiceflow.app/tools",
+        item: "https://rapidinvoice.online/tools",
       },
       {
         "@type": "ListItem",
@@ -130,7 +130,7 @@ export default function CalculatorLayout({ tool, children }) {
         </section>
 
         {/* Formula */}
-        <section className="mb-10">
+        {/* <section className="mb-10">
           <h2 className="text-2xl font-bold text-foreground mb-4">
             Formula Explanation
           </h2>
@@ -140,10 +140,10 @@ export default function CalculatorLayout({ tool, children }) {
               {tool.formulaExplanation}
             </p>
           </div>
-        </section>
+        </section> */}
 
         {/* Real World Example */}
-        <section className="mb-10">
+        {/* <section className="mb-10">
           <h2 className="text-2xl font-bold text-foreground mb-4">
             Real-World Example
           </h2>
@@ -151,7 +151,7 @@ export default function CalculatorLayout({ tool, children }) {
           <p className="text-muted-foreground">
             {tool.realWorldExample}
           </p>
-        </section>
+        </section> */}
 
         {/* Mid Ad */}
         <div className="my-8">
@@ -212,7 +212,7 @@ export default function CalculatorLayout({ tool, children }) {
               href="/templates"
               className="text-primary hover:underline text-sm font-medium"
             >
-              → Create a Professional Invoice with InvoiceFlow
+              → Create a Professional Invoice with Rapid Invoice
             </Link>
           </div>
         </section>

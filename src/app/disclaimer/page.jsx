@@ -9,8 +9,8 @@ const Disclaimer = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* <SEOHead
-        title="Disclaimer - InvoiceFlow"
-        description="Read our disclaimer regarding the use of InvoiceFlow invoice generator."
+        title="Disclaimer - Rapid Invoice"
+        description="Read our disclaimer regarding the use of Rapid Invoice invoice generator."
         keywords="disclaimer, terms, legal"
       /> */}
 

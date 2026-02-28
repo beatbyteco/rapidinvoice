@@ -8,11 +8,6 @@ import { Footer } from "@/components/layout/Footer";
 const PrivacyPolicy = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* <SEOHead
-        title="Privacy Policy - InvoiceFlow"
-        description="Read our privacy policy to understand how we handle your data."
-        keywords="privacy policy, data protection, GDPR"
-      /> */}
 
       {/* Header */}
       <header className="sticky top-0 z-50 bg-white glass-effect">
@@ -22,7 +17,7 @@ const PrivacyPolicy = () => {
               <FileText className="h-5 w-5 text-primary-foreground" />
             </div>
             <span className="font-bold text-xl text-foreground">
-              InvoiceFlow
+              Rapid Invoice
             </span>
           </Link>
           <nav className="hidden md:flex items-center gap-6">

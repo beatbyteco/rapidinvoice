@@ -51,7 +51,7 @@ export async function generateMetadata({ params }) {
       title: tool.seoTitle,
       description: tool.description,
       url,
-      siteName: "InvoiceFlow",
+      siteName: "Rapid Invoice",
       type: "article",
     },
     twitter: {

@@ -4,17 +4,28 @@ import { FileText } from 'lucide-react';
 const footerLinks = {
   product: [
     { href: '/templates', label: 'Invoice Generator' },
-    { href: '/tools', label: 'Calculators' },
     { href: '/invoices', label: 'My Invoices' },
     { href: '/settings', label: 'Settings' },
+  ],
+  tools: [
+    { href: '/tools', label: 'All Calculators' },
+    { href: '/tools/gst-calculator', label: 'GST Calculator' },
+    { href: '/tools/vat-calculator', label: 'VAT Calculator' },
+    { href: '/tools/sales-tax-calculator', label: 'Sales Tax Calculator' },
+    { href: '/tools/profit-margin-calculator', label: 'Profit Margin' },
+    { href: '/tools/markup-calculator', label: 'Markup Calculator' },
+  ],
+  company: [
+    { href: '/about', label: 'About Us' },
+    { href: '/contact', label: 'Contact Us' },
     { href: '/blog', label: 'Blog' },
+    { href: '/how-we-calculate', label: 'How We Calculate' },
+    { href: '/editorial-policy', label: 'Editorial Policy' },
   ],
   legal: [
     { href: '/privacy-policy', label: 'Privacy Policy' },
     { href: '/disclaimer', label: 'Disclaimer' },
-    { href: '/about', label: 'About Us' },
     { href: '/terms', label: 'Terms and Conditions' },
-    { href: '/contact', label: 'Contact Us' },
   ],
 };
 
@@ -23,7 +34,7 @@ export const Footer = () => {
     <footer className="bg-black text-white">
       <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto py-12 sm:py-16">
         
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           
           {/* Brand */}
           <div className="col-span-2 md:col-span-1">
@@ -53,6 +64,30 @@ export const Footer = () => {
                   >
                     {link.label}
                   </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Tools Links */}
+          <div>
+            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-white/80">Calculators</h4>
+            <ul className="space-y-3">
+              {footerLinks.tools.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-white/60 hover:text-white transition-colors text-sm">{link.label}</Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Company Links */}
+          <div>
+            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-white/80">Company</h4>
+            <ul className="space-y-3">
+              {footerLinks.company.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-white/60 hover:text-white transition-colors text-sm">{link.label}</Link>
                 </li>
               ))}
             </ul>

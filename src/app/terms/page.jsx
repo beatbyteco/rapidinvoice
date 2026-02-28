@@ -195,9 +195,9 @@ const TermsAndConditions = () => {
             <p>
               If you have any questions regarding these Terms, you may contact:
             </p>
-            <p className="flex gap-2">
+            <div className="flex gap-2">
               <strong>Email:</strong> <p className="text-blue-500">roboltin@duck.com</p>
-            </p>
+            </div>
           </div>
         </article>
       </main>

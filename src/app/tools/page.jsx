@@ -7,11 +7,11 @@ import { AdBanner } from "@/components/layout/AdBanner";
 import { getTaxTools, getBusinessTools } from "@/lib/toolsData";
 
 export const metadata = {
-  title: "Free Business & Tax Calculators – InvoiceFlow Tools",
+  title: "Free Business & Tax Calculators – Rapid Invoice Tools",
   description:
     "Free online calculators for GST, VAT, Sales Tax, Profit Margin, Break Even, Markup, and Discounts. No signup required. Instant results.",
   alternates: {
-    canonical: "https://invoiceflow.app/tools",
+    canonical: "https://rapidinvoice.online/tools",
   },
 };
 
@@ -21,9 +21,9 @@ export default function ToolsPage() {
 
   const faqs = [
     {
-      question: "What free calculators does InvoiceFlow offer?",
+      question: "What free calculators does Rapid Invoice offer?",
       answer:
-        "InvoiceFlow offers free GST Calculator (India), VAT Calculator (UK), Sales Tax Calculator (USA), Profit Margin Calculator, Break Even Calculator, Markup Calculator, and Discount Calculator.",
+        "Rapid Invoice offers free GST Calculator (India), VAT Calculator (UK), Sales Tax Calculator (USA), Profit Margin Calculator, Break Even Calculator, Markup Calculator, and Discount Calculator.",
     },
     {
       question: "Are these calculators free to use?",
