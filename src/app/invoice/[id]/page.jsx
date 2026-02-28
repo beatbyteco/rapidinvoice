@@ -23,7 +23,7 @@ import { Button } from '@/components/ui/button';
 import { InvoiceRenderer } from '@/components/invoice/InvoiceRenderer';
 import { useInvoiceStorage } from '@/hooks/use-invoice-storage';
 import { StoragePopup } from '@/components/StoragePopup';
-import { shareInvoicePDF } from '@/lib/shareInvoicePDF';
+// import { shareInvoicePDF } from '@/lib/shareInvoicePDF';
 import { toast } from 'sonner';
 
 const InvoiceViewPage = ( ) => {
